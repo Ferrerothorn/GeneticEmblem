@@ -4,10 +4,10 @@ import units.factory.Unit;
 import weapons.IronAxe;
 import weapons.IronSword;
 
-public class TankLord extends Unit {
+public class Tank extends Unit {
 	
-	public TankLord(){
-	this.setJob("Tank Lord");
+	public Tank(){
+	this.setJob("Tank");
 	this.addWeapon(new IronAxe());
 	this.addWeapon(new IronSword());
 	this.setHpBase();
