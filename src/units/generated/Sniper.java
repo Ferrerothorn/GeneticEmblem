@@ -17,19 +17,19 @@ public class Sniper extends Unit {
 		this.setDefBase(3);
 		this.setResBase(3);
 
-		this.setHpGr();
-		this.setStrGr();
-		this.setSkillGr();
-		this.setSpeedGr();
-		this.setLuckGr();
-		this.setDefGr();
-		this.setResGr();
+		this.setHpGr(65);
+		this.setStrGr(45);
+		this.setSkillGr(50);
+		this.setSpeedGr(50);
+		this.setLuckGr(40);
+		this.setDefGr(20);
+		this.setResGr(25);
 
-		this.setStrCap();
-		this.setSkillCap();
-		this.setSpeedCap();
-		this.setDefCap();
-		this.setResCap();
+		this.setStrCap(24);
+		this.setSkillCap(30);
+		this.setSpeedCap(29);
+		this.setDefCap(21);
+		this.setResCap(24);
 	}
 
 }

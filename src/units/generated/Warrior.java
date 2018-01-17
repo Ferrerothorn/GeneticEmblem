@@ -26,11 +26,11 @@ public class Warrior extends Unit {
 	this.setDefGr(25);
 	this.setResGr(15);
 	
-	this.setStrCap();
-	this.setSkillCap();
-	this.setSpeedCap();
-	this.setDefCap();
-	this.setResCap();
+	this.setStrCap(30);
+	this.setSkillCap(26);
+	this.setSpeedCap(26);
+	this.setDefCap(25);
+	this.setResCap(21);
 	}
 
 

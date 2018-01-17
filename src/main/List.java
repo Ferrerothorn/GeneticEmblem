@@ -25,7 +25,7 @@ public class List {
 	static Scanner input = new Scanner(System.in);
 	static CustomUnitGenerator customUnitGenerator;
 	static ClassList classList;
-	static int defaultLevelForExperiments = 20;
+	static int defaultLevelForExperiments = 15;
 	static boolean logging = false;
 
 	public static void main(String[] args) {

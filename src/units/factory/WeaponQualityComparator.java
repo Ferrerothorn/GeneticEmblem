@@ -21,10 +21,10 @@ public class WeaponQualityComparator implements Comparable<WeaponQualityComparat
 		if (matchups < o.getMatchups()) {
 			return 1;
 		}
-		if (this.wep.pow > o.wep.pow) {
+		if (this.wep.phys != o.wep.phys) {
 			return -1;
 		}
-		if (this.wep.pow < o.wep.pow) {
+		if (this.wep.phys == o.wep.phys) {
 			return 1;
 		}
 		return 0;
