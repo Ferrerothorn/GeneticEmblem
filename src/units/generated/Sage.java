@@ -10,27 +10,27 @@ public class Sage extends Unit {
 		this.setJob("Sage");
 		this.addWeapon(new Fire());
 		this.addWeapon(new Lightning());
-		this.setHpBase();
-		this.setStrBase();
-		this.setSkillBase();
-		this.setSpeedBase();
-		this.setLuckBase();
-		this.setDefBase();
-		this.setResBase();
+		this.setHpBase(20);
+		this.setStrBase(7);
+		this.setSkillBase(6);
+		this.setSpeedBase(7);
+		this.setLuckBase(6);
+		this.setDefBase(2);
+		this.setResBase(5);
 
-		this.setHpGr();
-		this.setStrGr();
-		this.setSkillGr();
-		this.setSpeedGr();
-		this.setLuckGr();
-		this.setDefGr();
-		this.setResGr();
+		this.setHpGr(45);
+		this.setStrGr(50);
+		this.setSkillGr(45);
+		this.setSpeedGr(55);
+		this.setLuckGr(40);
+		this.setDefGr(20);
+		this.setResGr(40);
 
-		this.setStrCap();
-		this.setSkillCap();
-		this.setSpeedCap();
-		this.setDefCap();
-		this.setResCap();
+		this.setStrCap(28);
+		this.setSkillCap(28);
+		this.setSpeedCap(26);
+		this.setDefCap(21);
+		this.setResCap(25);
 	}
 
 }

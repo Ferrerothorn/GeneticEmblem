@@ -26,11 +26,11 @@ public class Tank extends Unit {
 	this.setDefGr();
 	this.setResGr();
 	
-	this.setStrCap();
-	this.setSkillCap();
-	this.setSpeedCap();
-	this.setDefCap();
-	this.setResCap();
+	this.setStrCap(30);
+	this.setSkillCap(24);
+	this.setSpeedCap(24);
+	this.setDefCap(29);
+	this.setResCap(21);
 	}
 
 

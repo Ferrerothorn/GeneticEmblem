@@ -10,21 +10,21 @@ public class Warrior extends Unit {
 	this.setJob("Warrior");
 	this.addWeapon(new IronBow());
 	this.addWeapon(new IronAxe());
-	this.setHpBase();
-	this.setStrBase();
-	this.setSkillBase();
-	this.setSpeedBase();
-	this.setLuckBase();
-	this.setDefBase();
-	this.setResBase();
+	this.setHpBase(23);
+	this.setStrBase(9);
+	this.setSkillBase(7);
+	this.setSpeedBase(4);
+	this.setLuckBase(6);
+	this.setDefBase(5);
+	this.setResBase(2);
 	
-	this.setHpGr();
-	this.setStrGr();
-	this.setSkillGr();
-	this.setSpeedGr();
-	this.setLuckGr();
-	this.setDefGr();
-	this.setResGr();
+	this.setHpGr(80);
+	this.setStrGr(60);
+	this.setSkillGr(40);
+	this.setSpeedGr(35);
+	this.setLuckGr(40);
+	this.setDefGr(25);
+	this.setResGr(15);
 	
 	this.setStrCap();
 	this.setSkillCap();

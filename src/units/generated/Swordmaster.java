@@ -9,13 +9,13 @@ public class Swordmaster extends Unit {
 		this.setJob("Swordmaster");
 		this.addWeapon(new IronSword());
 		this.setBaseCrit(15);
-		this.setHpBase();
-		this.setStrBase();
-		this.setSkillBase();
-		this.setSpeedBase();
-		this.setLuckBase();
-		this.setDefBase();
-		this.setResBase();
+		this.setHpBase(22);
+		this.setStrBase(5);
+		this.setSkillBase(9);
+		this.setSpeedBase(9);
+		this.setLuckBase(6);
+		this.setDefBase(2);
+		this.setResBase(2);
 
 		this.setHpGr();
 		this.setStrGr();

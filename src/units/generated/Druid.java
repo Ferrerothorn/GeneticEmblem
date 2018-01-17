@@ -10,21 +10,21 @@ public class Druid extends Unit {
 	this.setJob("Druid");
 	this.addWeapon(new Fire());
 	this.addWeapon(new Flux());
-	this.setHpBase();
-	this.setStrBase();
-	this.setSkillBase();
-	this.setSpeedBase();
-	this.setLuckBase();
-	this.setDefBase();
-	this.setResBase();
+	this.setHpBase(20);
+	this.setStrBase(8);
+	this.setSkillBase(5);
+	this.setSpeedBase(6);
+	this.setLuckBase(4);
+	this.setDefBase(3);
+	this.setResBase(7);
 	
-	this.setHpGr();
-	this.setStrGr();
-	this.setSkillGr();
-	this.setSpeedGr();
-	this.setLuckGr();
-	this.setDefGr();
-	this.setResGr();
+	this.setHpGr(65);
+	this.setStrGr(55);
+	this.setSkillGr(40);
+	this.setSpeedGr(35);
+	this.setLuckGr(30);
+	this.setDefGr(22);
+	this.setResGr(48);
 	
 	this.setStrCap();
 	this.setSkillCap();

@@ -9,21 +9,21 @@ public class Geomancer extends Unit {
 		this.setJob("Geomancer");
 		this.setBaseCrit(5);
 		this.addWeapon(new Geomancy());
-		this.setHpBase();
-		this.setStrBase();
-		this.setSkillBase();
-		this.setSpeedBase();
-		this.setLuckBase();
-		this.setDefBase();
-		this.setResBase();
+		this.setHpBase(21);
+		this.setStrBase(5);
+		this.setSkillBase(5);
+		this.setSpeedBase(5);
+		this.setLuckBase(6);
+		this.setDefBase(6);
+		this.setResBase(6);
 
-		this.setHpGr();
-		this.setStrGr();
-		this.setSkillGr();
-		this.setSpeedGr();
-		this.setLuckGr();
-		this.setDefGr();
-		this.setResGr();
+		this.setHpGr(65);
+		this.setStrGr(40);
+		this.setSkillGr(35);
+		this.setSpeedGr(30);
+		this.setLuckGr(35);
+		this.setDefGr(45);
+		this.setResGr(45);
 
 		this.setStrCap();
 		this.setSkillCap();

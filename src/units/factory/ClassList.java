@@ -9,7 +9,8 @@ public class ClassList {
 	ArrayList<Unit> releasedClasses = new ArrayList<>();
 
 	public ClassList() {
-		//releasedClasses.add(new Hero());
+		releasedClasses.add(new Paladin());
+		releasedClasses.add(new Sage());
 	}
 
 	public ArrayList<Unit> getReleasedUnits() {

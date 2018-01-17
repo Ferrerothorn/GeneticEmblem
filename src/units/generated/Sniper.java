@@ -9,13 +9,13 @@ public class Sniper extends Unit {
 		this.setJob("Sniper");
 		this.setBaseCrit(15);
 		this.addWeapon(new IronBow());
-		this.setHpBase();
-		this.setStrBase();
-		this.setSkillBase();
-		this.setSpeedBase();
-		this.setLuckBase();
-		this.setDefBase();
-		this.setResBase();
+		this.setHpBase(21);
+		this.setStrBase(6);
+		this.setSkillBase(8);
+		this.setSpeedBase(8);
+		this.setLuckBase(5);
+		this.setDefBase(3);
+		this.setResBase(3);
 
 		this.setHpGr();
 		this.setStrGr();
