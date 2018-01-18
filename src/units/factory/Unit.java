@@ -313,9 +313,6 @@ public abstract class Unit {
 				}
 				hitDamage *= 3;
 			}
-			if (logging) {
-				System.out.println("Critical hit!");
-			}
 			target.currentHp -= hitDamage;
 			if (logging) {
 				System.out.println("And hits for " + hitDamage + " damage. (" + target.getJob() + " has ["
@@ -496,8 +493,8 @@ public abstract class Unit {
 			if (growthPerc < ResGr && ResBase < ResCap) {
 				ResBase++;
 			}
-			this.currentHp = this.HpBase;
 		}
+		this.currentHp = this.HpBase;
 	}
 
 	public int getCurrentHp() {

@@ -10,10 +10,15 @@ public class ClassList {
 
 	public ClassList() {
 		releasedClasses.add(new Paladin());
+		releasedClasses.add(new General());
 		releasedClasses.add(new Sage());
+		releasedClasses.add(new Chosen());
 		releasedClasses.add(new Tank());
+		releasedClasses.add(new Assassin());
 		releasedClasses.add(new Swordmaster());
 		releasedClasses.add(new Warrior());
+		releasedClasses.add(new Valkyrie());
+		releasedClasses.add(new Bishop());
 		releasedClasses.add(new Druid());
 		releasedClasses.add(new Hero());
 		releasedClasses.add(new Sniper());

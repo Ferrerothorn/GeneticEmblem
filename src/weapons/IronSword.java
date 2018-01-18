@@ -6,8 +6,8 @@ public class IronSword extends Weapon {
 
 	public IronSword() {
 		super.setTrinity("Sword");
-		super.setPow(5);
-		super.setAcc(90);
+		super.setPow(6);
+		super.setAcc(85);
 		super.setPhys(true);
 		super.setName("IronSword");
 	}
