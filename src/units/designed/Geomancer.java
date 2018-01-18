@@ -1,4 +1,4 @@
-package units.generated;
+package units.designed;
 
 import units.factory.Unit;
 import weapons.Geomancy;
