@@ -561,7 +561,6 @@ public abstract class Unit {
 	}
 
 	public boolean containsWeapon(ArrayList<WeaponQualityComparator> bestWeaponChoice, Weapon weapon) {
-		boolean returnValue = false;
 		for (WeaponQualityComparator w : bestWeaponChoice) {
 			if (w.getWeaponName().equals(weapon.getName())) {
 				return true;
