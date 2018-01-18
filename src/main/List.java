@@ -106,8 +106,9 @@ public class List {
 				addEachClass(15000, arena);
 				levelTheDudesTo(defaultLevelForExperiments, arena);
 				deathmatch(2048, arena);
+				double top = metagameBalanceMetrics(arena);
 				System.out.println();
-				
+
 				System.out.println("Generating units endlessly...");
 
 				customUnitGenerator = new CustomUnitGenerator();
@@ -134,7 +135,8 @@ public class List {
 					sortByValues(toBeSorted);
 					populate(metagamePairs, toBeSorted);
 
-					if (containsJob(arena, "Custom") && !metagamePairs.get(metagamePairs.size()-1).getName().equals("Custom")
+					if (newStDev < top && containsJob(arena, "Custom")
+							&& !metagamePairs.get(metagamePairs.size() - 1).getName().equals("Custom")
 							&& !metagamePairs.get(0).getName().equals("Custom")) {
 
 						String fileName = "" + newStDev;
@@ -259,7 +261,6 @@ public class List {
 
 		metagameHealth = sortByValues(metagameHealth);
 
-		@SuppressWarnings("rawtypes")
 		Iterator it = metagameHealth.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry pair = (Map.Entry) it.next();
@@ -312,14 +313,14 @@ public class List {
 		}
 		return survivors;
 	}
-	
+
+	@SuppressWarnings("unchecked")
 	private static void printMap(HashMap<String, Integer> survivors) {
 
 		survivors = sortByValues(survivors);
 
 		Iterator it = survivors.entrySet().iterator();
 		while (it.hasNext()) {
-			@SuppressWarnings("rawtypes")
 			Map.Entry pair = (Map.Entry) it.next();
 			System.out.println(pair.getKey() + ": " + pair.getValue());
 		}
@@ -375,7 +376,7 @@ public class List {
 		}
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "unchecked" })
 	private static HashMap sortByValues(HashMap map) {
 		LinkedList list = new LinkedList(map.entrySet());
 		Collections.sort(list, new Comparator() {
