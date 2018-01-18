@@ -52,7 +52,19 @@ public class CustomUnitGenerator {
 		generateCaps(r);
 		chooseWeapon(r);
 
-		if (strGr <= 30 && strCap > 24) {
+		if (strGr <= 30 && strCap > 25) {
+			generateNewUnitStats();
+		}
+		if (skillGr <= 30 && skillCap > 25) {
+			generateNewUnitStats();
+		}
+		if (speedGr <= 30 && speedCap > 25) {
+			generateNewUnitStats();
+		}
+		if (defGr <= 30 && defCap > 25) {
+			generateNewUnitStats();
+		}
+		if (resGr <= 30 && resCap > 25) {
 			generateNewUnitStats();
 		}
 		if (skillCap > speedCap && skillGr < speedGr) {
@@ -130,20 +142,24 @@ public class CustomUnitGenerator {
 
 	public void generateBases(Random r) {
 
-		baseHP = r.nextInt(7);
+		baseHP = r.nextInt(4);
 		baseHP += 20;
 		strBase = r.nextInt(5);
-		strBase += 5;
+		strBase += 4;
 		skillBase = r.nextInt(5);
-		skillBase += 5;
+		skillBase += 4;
 		speedBase = r.nextInt(5);
-		speedBase += 5;
-		luckBase = r.nextInt(6);
-		luckBase += 2;
-		defBase = r.nextInt(6);
-		defBase += 2;
-		resBase = r.nextInt(6);
+		speedBase += 4;
+		luckBase = r.nextInt(5);
+		luckBase += 4;
+		defBase = r.nextInt(8);
+		defBase += 1;
+		resBase = r.nextInt(7);
 		resBase += 1;
+
+		if (resBase + defBase + luckBase + speedBase + skillBase + strBase != 33) {
+			generateBases(r);
+		}
 	}
 
 	public void chooseWeapon(Random r) {
@@ -153,12 +169,12 @@ public class CustomUnitGenerator {
 
 	private void generateCaps(Random r) {
 
-		strCap = r.nextInt(11);
-		strCap += 20;
-		speedCap = r.nextInt(11);
-		speedCap += 20;
-		skillCap = r.nextInt(11);
-		skillCap += 20;
+		strCap = r.nextInt(8);
+		strCap += 23;
+		speedCap = r.nextInt(8);
+		speedCap += 23;
+		skillCap = r.nextInt(8);
+		skillCap += 23;
 		defCap = r.nextInt(11);
 		defCap += 20;
 		resCap = r.nextInt(11);
@@ -176,27 +192,27 @@ public class CustomUnitGenerator {
 		hpGr = r.nextInt(10);
 		hpGr += 9;
 		hpGr *= 5;
-		strGr = r.nextInt(9);
+		strGr = r.nextInt(8);
 		strGr += 5;
 		strGr *= 5;
 		skillGr = r.nextInt(8);
 		skillGr += 5;
 		skillGr *= 5;
-		speedGr = r.nextInt(10);
-		speedGr += 4;
+		speedGr = r.nextInt(9);
+		speedGr += 5;
 		speedGr *= 5;
-		luckGr = r.nextInt(11);
-		luckGr += 3;
+		luckGr = r.nextInt(10);
+		luckGr += 4;
 		luckGr *= 5;
 		defGr = r.nextInt(10);
-		defGr += 2;
+		defGr += 3;
 		defGr *= 5;
-		resGr = r.nextInt(9);
+		resGr = r.nextInt(10);
 		resGr += 3;
 		resGr *= 5;
 		int sumGRs = hpGr + strGr + skillGr + speedGr + luckGr + defGr + resGr;
 
-		if (sumGRs < 250 || sumGRs > 375) {
+		if (sumGRs < 290 || sumGRs > 300) {
 			generateGRs(r);
 		}
 	}
