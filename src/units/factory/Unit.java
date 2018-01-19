@@ -251,6 +251,10 @@ public abstract class Unit {
 	}
 
 	public void swingAt(Unit target, boolean logging) {
+
+		if (logging) {
+			System.out.println(this.getJob() + " swings at " + target.getJob() + "!");
+		}
 		Random r = new Random();
 
 		int thisAccu = 2 * this.getSkillBase() + this.LuckBase + chosenWeapon.getAcc()
@@ -375,7 +379,7 @@ public abstract class Unit {
 	}
 
 	public boolean greatlyOutspeeds(Unit target) {
-		if (SpeedBase - 4 >= target.SpeedBase) {
+		if (SpeedBase - target.SpeedBase >= 4) {
 			return true;
 		}
 		return false;
@@ -390,34 +394,29 @@ public abstract class Unit {
 		int turnCounter = 1;
 
 		while (this.isAlive() && opponent.isAlive() && turnCounter < 51) {
+
 			if (logging) {
 				System.out.println("Turn " + turnCounter + ":");
 			}
+
 			if (this.isAlive() && opponent.isAlive()) {
-				if (logging) {
-					System.out.println(this.getJob() + " swings at " + opponent.getJob() + "!");
-				}
 				this.swingAt(opponent, logging);
 			}
+
 			if (this.isAlive() && opponent.isAlive()) {
-				if (logging) {
-					System.out.println(opponent.getJob() + " swings back at " + this.getJob() + "!");
-				}
 				opponent.swingAt(this, logging);
-				if (this.isAlive() && opponent.isAlive() && this.greatlyOutspeeds(opponent)
-						&& !opponent.greatlyOutspeeds(this)) {
-					if (logging) {
-						System.out.println(this.getJob() + " swings at " + opponent.getJob() + "!");
-					}
-				}
+			}
+
+			if (this.isAlive() && opponent.isAlive() && this.greatlyOutspeeds(opponent)
+					&& !opponent.greatlyOutspeeds(this)) {
 				this.swingAt(opponent, logging);
-			} else if (this.isAlive() && opponent.isAlive() && !this.greatlyOutspeeds(opponent)
+			}
+
+			if (this.isAlive() && opponent.isAlive() && !this.greatlyOutspeeds(opponent)
 					&& opponent.greatlyOutspeeds(this)) {
 				opponent.swingAt(this, logging);
-				if (logging) {
-					System.out.println("And again, " + opponent.getJob() + " swings at " + this.getJob() + "!");
-				}
 			}
+
 			turnCounter++;
 		}
 

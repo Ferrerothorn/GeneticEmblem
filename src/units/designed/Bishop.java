@@ -2,12 +2,13 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.Lightning;
+import weapons.Shine;
 
 public class Bishop extends Unit {
 
 	public Bishop() {
 		this.setJob("Bishop");
-		this.addWeapon(new Lightning());
+		this.addWeapon(new Shine());
 		this.setHpBase(20);
 		this.setStrBase(6);
 		this.setSkillBase(5);

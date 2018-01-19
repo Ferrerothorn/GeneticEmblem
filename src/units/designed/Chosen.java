@@ -2,12 +2,13 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.IronSword;
+import weapons.Rapier;
 
 public class Chosen extends Unit {
 
 	public Chosen() {
 		this.setJob("Chosen");
-		this.addWeapon(new IronSword());
+		this.addWeapon(new Rapier());
 		this.setHpBase(21);
 		this.setStrBase(6);
 		this.setSkillBase(8);

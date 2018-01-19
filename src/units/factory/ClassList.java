@@ -18,6 +18,7 @@ public class ClassList {
 		releasedClasses.add(new Tank());
 		releasedClasses.add(new Assassin());
 		releasedClasses.add(new Swordmaster());
+		releasedClasses.add(new GreatKnight());
 		releasedClasses.add(new Warrior());
 		releasedClasses.add(new Valkyrie());
 		releasedClasses.add(new Bishop());

@@ -2,12 +2,13 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.IronSword;
+import weapons.SteelSword;
 
 public class Swordmaster extends Unit {
 
 	public Swordmaster() {
 		this.setJob("Swordmaster");
-		this.addWeapon(new IronSword());
+		this.addWeapon(new SteelSword());
 		this.setBaseCrit(15);
 		this.setHpBase(22);
 		this.setStrBase(5);

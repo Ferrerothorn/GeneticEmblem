@@ -3,12 +3,13 @@ package units.designed;
 import units.factory.Unit;
 import weapons.IronAxe;
 import weapons.IronSword;
+import weapons.SteelSword;
 
 public class Hero extends Unit {
 
 	public Hero() {
 		this.setJob("Hero");
-		this.addWeapon(new IronSword());
+		this.addWeapon(new SteelSword());
 		this.addWeapon(new IronAxe());
 		this.setHpBase(23);
 		this.setStrBase(6);
