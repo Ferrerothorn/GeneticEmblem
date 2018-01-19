@@ -189,7 +189,7 @@ public class CustomUnitGenerator {
 		resGr *= 5;
 		int sumGRs = hpGr + strGr + skillGr + speedGr + luckGr + defGr + resGr;
 
-		if (sumGRs < 250 || sumGRs > 375) {
+		if (sumGRs < 290 || sumGRs > 300) {
 			generateGRs(r);
 		}
 	}
