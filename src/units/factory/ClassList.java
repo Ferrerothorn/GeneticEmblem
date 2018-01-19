@@ -22,6 +22,7 @@ public class ClassList {
 		releasedClasses.add(new Warrior());
 		releasedClasses.add(new Valkyrie());
 		releasedClasses.add(new Bishop());
+		releasedClasses.add(new Halberdier());
 		releasedClasses.add(new Templar());
 		releasedClasses.add(new Druid());
 		releasedClasses.add(new Hero());
