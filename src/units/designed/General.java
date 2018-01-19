@@ -3,6 +3,7 @@ package units.designed;
 import units.factory.Unit;
 import weapons.IronAxe;
 import weapons.IronLance;
+import weapons.IronSword;
 
 public class General extends Unit {
 
@@ -10,6 +11,7 @@ public class General extends Unit {
 		this.setJob("General");
 		this.addWeapon(new IronAxe());
 		this.addWeapon(new IronLance());
+		this.addWeapon(new IronSword());
 		this.setHpBase(23);
 		this.setStrBase(8);
 		this.setSkillBase(8);

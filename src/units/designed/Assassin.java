@@ -2,13 +2,14 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.IronSword;
+import weapons.SteelSword;
 
 public class Assassin extends Unit {
 
 	public Assassin() {
 		this.setJob("Assassin");
 		this.setTrait("Assassin");
-		this.addWeapon(new IronSword());
+		this.addWeapon(new SteelSword());
 		this.setHpBase(21);
 		this.setStrBase(5);
 		this.setSkillBase(9);

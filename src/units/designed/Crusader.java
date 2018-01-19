@@ -3,13 +3,14 @@ package units.designed;
 import units.factory.Unit;
 import weapons.IronLance;
 import weapons.IronSword;
+import weapons.Rapier;
 
 public class Crusader extends Unit {
 
 	public Crusader() {
 		this.setJob("Crusader");
 		this.addWeapon(new IronLance());
-		this.addWeapon(new IronSword());
+		this.addWeapon(new Rapier());
 		this.setHpBase(22);
 		this.setStrBase(6);
 		this.setSkillBase(7);
