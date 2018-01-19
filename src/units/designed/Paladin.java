@@ -1,6 +1,7 @@
 package units.designed;
 
 import units.factory.Unit;
+import weapons.IronAxe;
 import weapons.IronLance;
 import weapons.IronSword;
 
@@ -10,6 +11,7 @@ public class Paladin extends Unit {
 		this.setJob("Paladin");
 		this.addWeapon(new IronSword());
 		this.addWeapon(new IronLance());
+		this.addWeapon(new IronAxe());
 		this.setHpBase(22);
 		this.setStrBase(6);
 		this.setSkillBase(7);
