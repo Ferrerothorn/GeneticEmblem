@@ -42,6 +42,7 @@ public class CustomUnitGenerator {
 		armory.add(new Fire());
 		armory.add(new Flux());
 		armory.add(new IronBow());
+		armory.add(new Rapier());
 	}
 
 	public void generateNewUnitStats() {
@@ -52,15 +53,6 @@ public class CustomUnitGenerator {
 		generateCaps(r);
 		chooseWeapon(r);
 
-		if (strGr <= 30 && strCap > 24) {
-			generateNewUnitStats();
-		}
-		if (skillCap > speedCap && skillGr < speedGr) {
-			generateNewUnitStats();
-		}
-		if (defGr < speedGr && speedCap < defCap) {
-			generateNewUnitStats();
-		}
 		if (skillBase > strBase && skillCap < strCap) {
 			generateNewUnitStats();
 		}
@@ -79,9 +71,6 @@ public class CustomUnitGenerator {
 		if ((defBase > resBase && resGr > defGr) || (resBase > defBase && defGr > resGr)) {
 			generateNewUnitStats();
 		}
-		if ((defCap > resCap && resGr > defGr) || (resCap > defCap && defGr > resGr)) {
-			generateNewUnitStats();
-		}
 		if ((defBase > resBase && resCap > defCap) || (resBase > defBase && defCap > resCap)) {
 			generateNewUnitStats();
 		}
@@ -96,7 +85,7 @@ public class CustomUnitGenerator {
 	public Custom buildUnit() {
 		ArrayList<Weapon> backpack = new ArrayList<Weapon>();
 		fill(backpack);
-		
+
 		Custom custom = new Custom(backpack, baseHP, strBase, skillBase, speedBase, luckBase, defBase, resBase, hpGr,
 				strGr, skillGr, speedGr, luckGr, defGr, resGr, strCap, speedCap, skillCap, defCap, resCap);
 		return custom;
@@ -130,19 +119,19 @@ public class CustomUnitGenerator {
 
 	public void generateBases(Random r) {
 
-		baseHP = r.nextInt(7);
+		baseHP = r.nextInt(4);
 		baseHP += 20;
-		strBase = r.nextInt(5);
-		strBase += 5;
-		skillBase = r.nextInt(5);
-		skillBase += 5;
-		speedBase = r.nextInt(5);
-		speedBase += 5;
-		luckBase = r.nextInt(6);
-		luckBase += 2;
-		defBase = r.nextInt(6);
-		defBase += 2;
-		resBase = r.nextInt(6);
+		strBase = r.nextInt(6);
+		strBase += 4;
+		skillBase = r.nextInt(6);
+		skillBase += 4;
+		speedBase = r.nextInt(6);
+		speedBase += 4;
+		luckBase = r.nextInt(5);
+		luckBase += 4;
+		defBase = r.nextInt(8);
+		defBase += 1;
+		resBase = r.nextInt(7);
 		resBase += 1;
 	}
 
@@ -165,7 +154,7 @@ public class CustomUnitGenerator {
 		resCap += 20;
 		int sumCaps = strCap + speedCap + skillCap + defCap + resCap;
 
-		if (sumCaps < 123 || sumCaps > 135) {
+		if (sumCaps < 127 || sumCaps > 129) {
 			generateCaps(r);
 		}
 
@@ -173,8 +162,8 @@ public class CustomUnitGenerator {
 
 	private void generateGRs(Random r) {
 
-		hpGr = r.nextInt(10);
-		hpGr += 9;
+		hpGr = r.nextInt(16);
+		hpGr += 7;
 		hpGr *= 5;
 		strGr = r.nextInt(9);
 		strGr += 5;
@@ -196,7 +185,7 @@ public class CustomUnitGenerator {
 		resGr *= 5;
 		int sumGRs = hpGr + strGr + skillGr + speedGr + luckGr + defGr + resGr;
 
-		if (sumGRs < 250 || sumGRs > 375) {
+		if (sumGRs !=295 ) {
 			generateGRs(r);
 		}
 	}
