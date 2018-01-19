@@ -11,6 +11,6 @@ public class Shine extends Weapon {
 		super.setAcc(90);
 		super.setCrit(8);
 		super.setPhys(false);
-		super.setName("Aura");
+		super.setName("Shine");
 	}
 }
