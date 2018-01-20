@@ -1,7 +1,6 @@
 package units.designed;
 
 import units.factory.Unit;
-import weapons.Lightning;
 import weapons.Shine;
 
 public class Bishop extends Unit {

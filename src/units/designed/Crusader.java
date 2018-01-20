@@ -2,7 +2,6 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.IronLance;
-import weapons.IronSword;
 import weapons.Rapier;
 
 public class Crusader extends Unit {

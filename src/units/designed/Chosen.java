@@ -1,7 +1,6 @@
 package units.designed;
 
 import units.factory.Unit;
-import weapons.IronSword;
 import weapons.Rapier;
 
 public class Chosen extends Unit {

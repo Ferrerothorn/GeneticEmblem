@@ -2,7 +2,6 @@ package units.designed;
 
 import units.factory.Unit;
 import weapons.IronAxe;
-import weapons.IronSword;
 import weapons.SteelSword;
 
 public class Hero extends Unit {
@@ -13,19 +12,19 @@ public class Hero extends Unit {
 		this.addWeapon(new IronAxe());
 		this.setHpBase(23);
 		this.setStrBase(6);
-		this.setSkillBase(9);
-		this.setSpeedBase(7);
-		this.setLuckBase(5);
+		this.setSkillBase(8);
+		this.setSpeedBase(9);
+		this.setLuckBase(4);
 		this.setDefBase(5);
 		this.setResBase(1);
 
-		this.setHpGr(85);
-		this.setStrGr(45);
-		this.setSkillGr(40);
-		this.setSpeedGr(40);
+		this.setHpGr(80);
+		this.setStrGr(40);
+		this.setSkillGr(45);
+		this.setSpeedGr(45);
 		this.setLuckGr(35);
-		this.setDefGr(30);
-		this.setResGr(20);
+		this.setDefGr(35);
+		this.setResGr(15);
 
 		this.setStrCap(25);
 		this.setSkillCap(30);
