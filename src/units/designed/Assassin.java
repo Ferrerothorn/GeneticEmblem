@@ -1,7 +1,6 @@
 package units.designed;
 
 import units.factory.Unit;
-import weapons.IronSword;
 import weapons.SteelSword;
 
 public class Assassin extends Unit {
@@ -18,19 +17,19 @@ public class Assassin extends Unit {
 		this.setDefBase(3);
 		this.setResBase(2);
 
-		this.setHpGr(65);
-		this.setStrGr(35);
-		this.setSkillGr(45);
-		this.setSpeedGr(65);
+		this.setHpGr(60);
+		this.setStrGr(40);
+		this.setSkillGr(50);
+		this.setSpeedGr(60);
 		this.setLuckGr(45);
 		this.setDefGr(20);
 		this.setResGr(20);
 
-		this.setStrCap(26);
+		this.setStrCap(24);
 		this.setSkillCap(30);
 		this.setSpeedCap(30);
-		this.setDefCap(21);
-		this.setResCap(21);
+		this.setDefCap(22);
+		this.setResCap(22);
 	}
 
 }
