@@ -1,13 +1,13 @@
 package units.designed;
 
 import units.factory.Unit;
-import weapons.Lightning;
+import weapons.Shine;
 
 public class Valkyrie extends Unit {
 
 	public Valkyrie() {
 		this.setJob("Valkyrie");
-		this.addWeapon(new Lightning());
+		this.addWeapon(new Shine());
 		this.setHpBase(20);
 		this.setStrBase(6);
 		this.setSkillBase(4);

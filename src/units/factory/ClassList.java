@@ -12,6 +12,7 @@ public class ClassList {
 	public ClassList() {
 		releasedClasses.add(new Paladin());
 		releasedClasses.add(new General());
+		releasedClasses.add(new Lancer());
 		releasedClasses.add(new Sage());
 		releasedClasses.add(new Viking());
 		releasedClasses.add(new Chosen());
@@ -20,6 +21,7 @@ public class ClassList {
 		releasedClasses.add(new Swordmaster());
 		releasedClasses.add(new GreatKnight());
 		releasedClasses.add(new Warrior());
+		releasedClasses.add(new Ballistician());
 		releasedClasses.add(new Valkyrie());
 		releasedClasses.add(new Bishop());
 		releasedClasses.add(new Halberdier());
