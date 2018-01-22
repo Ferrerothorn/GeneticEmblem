@@ -17,11 +17,11 @@ public class Fencer extends Unit {
 		this.setResBase(1);
 
 		this.setHpGr(50);
-		this.setStrGr(35);
+		this.setStrGr(40);
 		this.setSkillGr(55);
-		this.setSpeedGr(55);
-		this.setLuckGr(50);
-		this.setDefGr(25);
+		this.setSpeedGr(60);
+		this.setLuckGr(45);
+		this.setDefGr(20);
 		this.setResGr(25);
 
 		this.setStrCap(24);

@@ -7,7 +7,7 @@ public class Assassin extends Unit {
 
 	public Assassin() {
 		this.setJob("Assassin");
-		this.setTrait("Assassin");
+		this.addTrait("Assassin");
 		this.addWeapon(new SteelSword());
 		this.setHpBase(21);
 		this.setStrBase(5);
