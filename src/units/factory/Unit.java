@@ -259,29 +259,17 @@ public abstract class Unit {
 
 		int thisAccu = 2 * this.getSkillBase() + this.LuckBase + chosenWeapon.getAcc()
 				+ this.triangleAccuracyBonus(chosenWeapon, target.getWeapon());
+
 		int thisPower = this.StrBase + chosenWeapon.getPow()
 				+ this.triangleDamageBonus(chosenWeapon, target.getWeapon());
 
-		if (target.getTraits().contains("Flying") && this.getWeapon().getTraits().contains("Arrow")) {
-			thisPower += (chosenWeapon.getPow());
-		}
+		int thisCrit = ((this.SkillBase / 2) + this.getBaseCrit() + 5 + this.chosenWeapon.getCrit())
+				- target.getLuckBase();
+		
+		int hitDamage = 0;
 
-		if ((target.getTraits().contains("Mounted") && this.getWeapon().getTraits().contains("Horseslayer"))
-				|| (target.getTraits().contains("Armor") && this.getWeapon().getTraits().contains("Armorslayer"))) {
-			thisPower += (chosenWeapon.getPow());
-		}
+		damageModifierSkills(target, thisAccu, thisPower, r);
 
-		if ((target.getTraits().contains("Monster") && this.getJob().equals("Bishop"))) {
-			thisPower += (chosenWeapon.getPow() * 2);
-		}
-
-		int pierce = r.nextInt(100);
-		if ((this.getTraits().contains("Pierce") && pierce < (this.lv / 2))) {
-			thisPower += target.getDefBase();
-		}
-
-		int thisCrit = this.SkillBase / 2 + this.getBaseCrit() + 5 + this.chosenWeapon.getCrit() - target.getLuckBase();
-		int hitDamage;
 		if (this.chosenWeapon.isPhys()) {
 			hitDamage = thisPower - target.DefBase;
 		} else {
@@ -291,9 +279,16 @@ public abstract class Unit {
 		if (hitDamage < 0) {
 			hitDamage = 0;
 		}
-
+		
 		int theirAvo = 2 * target.SpeedBase + target.LuckBase;
 		int overallHitRate = thisAccu - theirAvo;
+
+		if (this.getJob().equals("Sniper")) {
+			int sureStrike = r.nextInt(100);
+			if (sureStrike < 2 * this.SkillBase) {
+				overallHitRate = 999;
+			}
+		}
 
 		if (logging) {
 			System.out.println(this.getJob() + " boasts " + overallHitRate + "%" + " accuracy.");
@@ -325,10 +320,33 @@ public abstract class Unit {
 			if (logging) {
 				System.out.println("And hits for " + hitDamage + " damage. (" + target.getJob() + " has ["
 						+ target.getCurrentHp() + "/" + target.getHpBase() + "] left.)");
+				overallHitRate = thisAccu - theirAvo;
 			}
 		} else {
 			if (logging) {
 				System.out.println("Miss!");
+			}
+		}
+	}
+
+	private void damageModifierSkills(Unit target, int thisAccu, int thisPower, Random r) {
+		if (target.getTraits().contains("Flying") && this.getWeapon().getTraits().contains("Arrow")) {
+			thisPower += (chosenWeapon.getPow());
+		}
+
+		if ((target.getTraits().contains("Mounted") && this.getWeapon().getTraits().contains("Horseslayer"))
+				|| (target.getTraits().contains("Armor") && this.getWeapon().getTraits().contains("Armorslayer"))) {
+			thisPower += (chosenWeapon.getPow());
+		}
+
+		if ((target.getTraits().contains("Monster") && this.getJob().equals("Bishop"))) {
+			thisPower += (chosenWeapon.getPow() * 2);
+		}
+
+		if ((this.getTraits().contains("Pierce"))) {
+			int pierce = r.nextInt(100);
+			if (pierce < (this.lv / 2)) {
+				thisPower += target.getDefBase();
 			}
 		}
 	}
