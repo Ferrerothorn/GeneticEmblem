@@ -10,9 +10,18 @@ public class ClassList {
 	ArrayList<Unit> releasedClasses = new ArrayList<>();
 
 	public ClassList() {
+		releasedClasses.add(new WyvernLord());
+		releasedClasses.add(new Recruit());
+		releasedClasses.add(new DarkKnight());
+		releasedClasses.add(new Pegasus());
+		releasedClasses.add(new Nomad());
+		releasedClasses.add(new Ninja());
+		releasedClasses.add(new Mercenary());
+		releasedClasses.add(new Journeyman());		
 		releasedClasses.add(new Paladin());
 		releasedClasses.add(new General());
 		releasedClasses.add(new Lancer());
+		releasedClasses.add(new Mogall());
 		releasedClasses.add(new Sage());
 		releasedClasses.add(new Viking());
 		releasedClasses.add(new Chosen());

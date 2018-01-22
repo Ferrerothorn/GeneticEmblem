@@ -263,12 +263,16 @@ public abstract class Unit {
 				+ this.triangleDamageBonus(chosenWeapon, target.getWeapon());
 
 		if (target.getTraits().contains("Flying") && this.getWeapon().getTraits().contains("Arrow")) {
-			thisPower += (chosenWeapon.getPow() * 3);
+			thisPower += (chosenWeapon.getPow());
 		}
 
 		if ((target.getTraits().contains("Mounted") && this.getWeapon().getTraits().contains("Horseslayer"))
 				|| (target.getTraits().contains("Armor") && this.getWeapon().getTraits().contains("Armorslayer"))) {
-			thisPower += (chosenWeapon.getPow() * 3);
+			thisPower += (chosenWeapon.getPow());
+		}
+
+		if ((target.getTraits().contains("Monster") && this.getJob().equals("Bishop"))) {
+			thisPower += (chosenWeapon.getPow() * 2);
 		}
 
 		int pierce = r.nextInt(100);

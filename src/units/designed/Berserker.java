@@ -1,13 +1,13 @@
 package units.designed;
 
 import units.factory.Unit;
-import weapons.IronAxe;
+import weapons.SteelAxe;
 
 public class Berserker extends Unit {
 
 	public Berserker() {
 		this.setJob("Berserker");
-		this.addWeapon(new IronAxe());
+		this.addWeapon(new SteelAxe());
 		this.setBaseCrit(15);
 		this.setHpBase(23);
 		this.setStrBase(9);
