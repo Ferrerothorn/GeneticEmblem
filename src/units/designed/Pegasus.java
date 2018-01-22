@@ -8,7 +8,7 @@ public class Pegasus extends Unit {
 
 	public Pegasus() {
 		this.setJob("Falcoknight");
-		this.setTrait("Flying");
+		this.addTrait("Flying");
 		this.addWeapon(new IronLance());
 		this.addWeapon(new IronSword());
 		this.setHpBase(20);

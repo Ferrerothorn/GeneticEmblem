@@ -450,7 +450,7 @@ public abstract class Unit {
 		return traits;
 	}
 
-	protected void setTrait(String trait) {
+	protected void addTrait(String trait) {
 		traits.add(trait);
 	}
 

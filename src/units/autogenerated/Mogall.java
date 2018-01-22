@@ -9,7 +9,7 @@ public Mogall() {
 
     this.setJob("Mogall");
     this.addWeapon(new Flux());
-    this.setTrait("Monster");
+    this.addTrait("Monster");
     this.setHpBase(20);
     this.setCurrentHp(this.getHpBase());
     this.setStrBase(8);

@@ -8,7 +8,7 @@ public class WyvernLord extends Unit {
 
 	public WyvernLord() {
 		this.setJob("Wyvern Lord");
-		this.setTrait("Flying");
+		this.addTrait("Flying");
 		this.addWeapon(new IronLance());
 		this.addWeapon(new IronSword());
 		this.setHpBase(23);
