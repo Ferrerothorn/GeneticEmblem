@@ -12,12 +12,12 @@ public DarkKnight() {
     this.addWeapon(new Flux());
     this.setHpBase(21);
     this.setCurrentHp(this.getHpBase());
-    this.setStrBase(5);
+    this.setStrBase(6);
     this.setSkillBase(7);
     this.setSpeedBase(9);
-    this.setLuckBase(4);
-    this.setDefBase(3);
-    this.setResBase(5);
+    this.setLuckBase(3);
+    this.setDefBase(5);
+    this.setResBase(3);
 
     this.setHpGr(50);
     this.setStrGr(55);
