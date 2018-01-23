@@ -17,13 +17,13 @@ public class Recruit extends Unit {
 		this.setDefBase(5);
 		this.setResBase(2);
 
-		this.setHpGr(65);
+		this.setHpGr(50);
 		this.setStrGr(40);
-		this.setSkillGr(40);
-		this.setSpeedGr(40);
-		this.setLuckGr(55);
+		this.setSkillGr(60);
+		this.setSpeedGr(50);
+		this.setLuckGr(60);
 		this.setDefGr(35);
-		this.setResGr(20);
+		this.setResGr(25);
 
 		this.setStrCap(23);
 		this.setSkillCap(30);

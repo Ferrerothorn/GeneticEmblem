@@ -18,13 +18,13 @@ public class Ninja extends Unit {
 		this.setDefBase(2);
 		this.setResBase(1);
 
-		this.setHpGr(55);
-		this.setStrGr(33);
-		this.setSkillGr(55);
-		this.setSpeedGr(55);
+		this.setHpGr(45);
+		this.setStrGr(50);
+		this.setSkillGr(60);
+		this.setSpeedGr(60);
 		this.setLuckGr(55);
-		this.setDefGr(21);
-		this.setResGr(21);
+		this.setDefGr(25);
+		this.setResGr(25);
 
 		this.setStrCap(24);
 		this.setSkillCap(30);

@@ -18,12 +18,12 @@ public class Warrior extends Unit {
 	this.setDefBase(5);
 	this.setResBase(2);
 	
-	this.setHpGr(80);
-	this.setStrGr(60);
-	this.setSkillGr(40);
+	this.setHpGr(85);
+	this.setStrGr(65);
+	this.setSkillGr(45);
 	this.setSpeedGr(35);
-	this.setLuckGr(40);
-	this.setDefGr(25);
+	this.setLuckGr(35);
+	this.setDefGr(40);
 	this.setResGr(15);
 	
 	this.setStrCap(30);

@@ -322,8 +322,19 @@ public class List {
 		Iterator it = survivors.entrySet().iterator();
 		while (it.hasNext()) {
 			Map.Entry pair = (Map.Entry) it.next();
-			System.out.println(pair.getKey() + ": " + pair.getValue());
+			System.out
+					.println(pair.getKey() + ": " + pair.getValue() + " (" + getTotal(pair.getKey().toString()) + ")");
 		}
+	}
+
+	private static int getTotal(String key) {
+		for (Unit u : arena) {
+			if (u.getJob().equals(key)) {
+				return u.getHpGr() + u.getStrGr() + u.getSkillGr() + u.getSpeedGr() + u.getLuckGr() + u.getDefGr()
+						+ u.getResGr();
+			}
+		}
+		return 0;
 	}
 
 	private static void deathmatch(int i, ArrayList<Unit> u) {

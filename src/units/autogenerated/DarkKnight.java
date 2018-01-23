@@ -23,9 +23,9 @@ public DarkKnight() {
     this.setStrGr(55);
     this.setSkillGr(60);
     this.setSpeedGr(65);
-    this.setLuckGr(20);
-    this.setDefGr(25);
-    this.setResGr(25);
+    this.setLuckGr(10);
+    this.setDefGr(40);
+    this.setResGr(40);
 
     this.setStrCap(27);
     this.setSkillCap(27);

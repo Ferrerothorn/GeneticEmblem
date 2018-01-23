@@ -20,12 +20,12 @@ public Woodcutter() {
     this.setDefBase(5);
     this.setResBase(4);
 
-    this.setHpGr(35);
-    this.setStrGr(35);
+    this.setHpGr(40);
+    this.setStrGr(40);
     this.setSkillGr(55);
-    this.setSpeedGr(30);
-    this.setLuckGr(65);
-    this.setDefGr(50);
+    this.setSpeedGr(40);
+    this.setLuckGr(60);
+    this.setDefGr(55);
     this.setResGr(30);
 
     this.setStrCap(23);
