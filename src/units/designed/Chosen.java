@@ -16,13 +16,13 @@ public class Chosen extends Unit {
 		this.setDefBase(5);
 		this.setResBase(3);
 
-		this.setHpGr(60);
+		this.setHpGr(55);
 		this.setStrGr(40);
-		this.setSkillGr(50);
-		this.setSpeedGr(40);
+		this.setSkillGr(45);
+		this.setSpeedGr(55);
 		this.setLuckGr(50);
-		this.setDefGr(25);
-		this.setResGr(30);
+		this.setDefGr(35);
+		this.setResGr(40);
 
 		this.setStrCap(26);
 		this.setSkillCap(26);

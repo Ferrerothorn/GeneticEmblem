@@ -21,11 +21,11 @@ public class General extends Unit {
 		this.setResBase(1);
 
 		this.setHpGr(80);
-		this.setStrGr(45);
-		this.setSkillGr(40);
+		this.setStrGr(55);
+		this.setSkillGr(45);
 		this.setSpeedGr(30);
 		this.setLuckGr(35);
-		this.setDefGr(45);
+		this.setDefGr(55);
 		this.setResGr(20);
 
 		this.setStrCap(29);

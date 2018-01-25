@@ -16,13 +16,13 @@ public class Lancer extends Unit {
 		this.setDefBase(5);
 		this.setResBase(3);
 
-		this.setHpGr(55);
+		this.setHpGr(75);
 		this.setStrGr(50);
-		this.setSkillGr(50);
-		this.setSpeedGr(40);
+		this.setSkillGr(55);
+		this.setSpeedGr(45);
 		this.setLuckGr(40);
 		this.setDefGr(35);
-		this.setResGr(25);
+		this.setResGr(20);
 
 		this.setStrCap(27);
 		this.setSkillCap(27);

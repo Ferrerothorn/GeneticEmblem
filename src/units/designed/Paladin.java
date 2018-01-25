@@ -20,13 +20,13 @@ public class Paladin extends Unit {
 		this.setDefBase(6);
 		this.setResBase(3);
 
-		this.setHpGr(75);
+		this.setHpGr(85);
 		this.setStrGr(45);
 		this.setSkillGr(45);
 		this.setSpeedGr(45);
 		this.setLuckGr(30);
-		this.setDefGr(30);
-		this.setResGr(25);
+		this.setDefGr(40);
+		this.setResGr(30);
 
 		this.setStrCap(26);
 		this.setSkillCap(26);

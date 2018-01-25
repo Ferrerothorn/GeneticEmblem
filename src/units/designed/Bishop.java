@@ -18,11 +18,11 @@ public class Bishop extends Unit {
 
 		this.setHpGr(55);
 		this.setStrGr(50);
-		this.setSkillGr(35);
-		this.setSpeedGr(40);
+		this.setSkillGr(40);
+		this.setSpeedGr(45);
 		this.setLuckGr(40);
-		this.setDefGr(25);
-		this.setResGr(50);
+		this.setDefGr(30);
+		this.setResGr(60);
 
 		this.setStrCap(24);
 		this.setSkillCap(26);

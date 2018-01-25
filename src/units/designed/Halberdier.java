@@ -16,12 +16,12 @@ public class Halberdier extends Unit {
 		this.setDefBase(6);
 		this.setResBase(3);
 
-		this.setHpGr(65);
-		this.setStrGr(50);
-		this.setSkillGr(45);
-		this.setSpeedGr(45);
+		this.setHpGr(70);
+		this.setStrGr(55);
+		this.setSkillGr(50);
+		this.setSpeedGr(50);
 		this.setLuckGr(25);
-		this.setDefGr(40);
+		this.setDefGr(45);
 		this.setResGr(25);
 
 		this.setStrCap(25);

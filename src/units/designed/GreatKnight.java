@@ -21,11 +21,11 @@ public class GreatKnight extends Unit {
 		this.setResBase(1);
 
 		this.setHpGr(85);
-		this.setStrGr(50);
+		this.setStrGr(55);
 		this.setSkillGr(40);
-		this.setSpeedGr(35);
-		this.setLuckGr(20);
-		this.setDefGr(40);
+		this.setSpeedGr(40);
+		this.setLuckGr(25);
+		this.setDefGr(50);
 		this.setResGr(25);
 
 		this.setStrCap(28);

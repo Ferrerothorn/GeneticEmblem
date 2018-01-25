@@ -18,10 +18,10 @@ public class Swordmaster extends Unit {
 		this.setResBase(2);
 
 		this.setHpGr(70);
-		this.setStrGr(35);
-		this.setSkillGr(50);
+		this.setStrGr(40);
+		this.setSkillGr(60);
 		this.setSpeedGr(60);
-		this.setLuckGr(40);
+		this.setLuckGr(50);
 		this.setDefGr(20);
 		this.setResGr(20);
 

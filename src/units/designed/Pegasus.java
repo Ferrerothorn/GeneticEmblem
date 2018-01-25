@@ -19,13 +19,13 @@ public class Pegasus extends Unit {
 		this.setDefBase(3);
 		this.setResBase(4);
 
-		this.setHpGr(60);
-		this.setStrGr(35);
-		this.setSkillGr(50);
-		this.setSpeedGr(55);
-		this.setLuckGr(45);
+		this.setHpGr(65);
+		this.setStrGr(45);
+		this.setSkillGr(40);
+		this.setSpeedGr(65);
+		this.setLuckGr(60);
 		this.setDefGr(20);
-		this.setResGr(30);
+		this.setResGr(25);
 
 		this.setStrCap(23);
 		this.setSkillCap(26);

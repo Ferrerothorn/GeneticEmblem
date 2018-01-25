@@ -17,13 +17,13 @@ public class Journeyman extends Unit {
 		this.setDefBase(5);
 		this.setResBase(3);
 
-		this.setHpGr(70);
+		this.setHpGr(75);
 		this.setStrGr(55);
 		this.setSkillGr(40);
 		this.setSpeedGr(35);
-		this.setLuckGr(40);
-		this.setDefGr(35);
-		this.setResGr(25);
+		this.setLuckGr(45);
+		this.setDefGr(40);
+		this.setResGr(30);
 
 		this.setStrCap(26);
 		this.setSkillCap(29);

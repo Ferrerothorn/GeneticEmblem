@@ -19,10 +19,10 @@ public class Berserker extends Unit {
 
 		this.setHpGr(80);
 		this.setStrGr(60);
-		this.setSkillGr(35);
-		this.setSpeedGr(45);
+		this.setSkillGr(40);
+		this.setSpeedGr(55);
 		this.setLuckGr(35);
-		this.setDefGr(20);
+		this.setDefGr(30);
 		this.setResGr(20);
 
 		this.setStrCap(30);
