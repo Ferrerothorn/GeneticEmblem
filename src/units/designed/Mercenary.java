@@ -16,10 +16,10 @@ public class Mercenary extends Unit {
 		this.setDefBase(4);
 		this.setResBase(3);
 
-		this.setHpGr(60);
-		this.setStrGr(45);
-		this.setSkillGr(45);
-		this.setSpeedGr(50);
+		this.setHpGr(70);
+		this.setStrGr(50);
+		this.setSkillGr(50);
+		this.setSpeedGr(55);
 		this.setLuckGr(35);
 		this.setDefGr(30);
 		this.setResGr(30);

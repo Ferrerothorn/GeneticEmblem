@@ -18,12 +18,12 @@ public class Hero extends Unit {
 		this.setDefBase(5);
 		this.setResBase(1);
 
-		this.setHpGr(80);
-		this.setStrGr(40);
-		this.setSkillGr(45);
-		this.setSpeedGr(45);
+		this.setHpGr(85);
+		this.setStrGr(45);
+		this.setSkillGr(60);
+		this.setSpeedGr(50);
 		this.setLuckGr(35);
-		this.setDefGr(35);
+		this.setDefGr(30);
 		this.setResGr(15);
 
 		this.setStrCap(25);

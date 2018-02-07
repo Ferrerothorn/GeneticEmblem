@@ -20,11 +20,11 @@ public class Druid extends Unit {
 
 		this.setHpGr(65);
 		this.setStrGr(55);
-		this.setSkillGr(40);
-		this.setSpeedGr(35);
+		this.setSkillGr(50);
+		this.setSpeedGr(40);
 		this.setLuckGr(30);
-		this.setDefGr(22);
-		this.setResGr(48);
+		this.setDefGr(30);
+		this.setResGr(50);
 
 		this.setStrCap(28);
 		this.setSkillCap(25);

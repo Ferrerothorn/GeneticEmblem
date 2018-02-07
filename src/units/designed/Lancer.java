@@ -8,7 +8,7 @@ public class Lancer extends Unit {
 	public Lancer() {
 		this.setJob("Lancer");
 		this.addWeapon(new SteelLance());
-		this.setHpBase(22);
+		this.setHpBase(23);
 		this.setStrBase(7);
 		this.setSkillBase(7);
 		this.setSpeedBase(6);
@@ -30,5 +30,4 @@ public class Lancer extends Unit {
 		this.setDefCap(26);
 		this.setResCap(23);
 	}
-
 }

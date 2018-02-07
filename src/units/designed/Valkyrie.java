@@ -18,11 +18,11 @@ public class Valkyrie extends Unit {
 
 		this.setHpGr(45);
 		this.setStrGr(45);
-		this.setSkillGr(35);
-		this.setSpeedGr(40);
+		this.setSkillGr(40);
+		this.setSpeedGr(45);
 		this.setLuckGr(65);
-		this.setDefGr(15);
-		this.setResGr(50);
+		this.setDefGr(20);
+		this.setResGr(60);
 
 		this.setStrCap(25);
 		this.setSkillCap(25);

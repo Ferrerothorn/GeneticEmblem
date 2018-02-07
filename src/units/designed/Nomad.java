@@ -18,12 +18,12 @@ public class Nomad extends Unit {
 		this.setDefBase(5);
 		this.setResBase(3);
 
-		this.setHpGr(65);
-		this.setStrGr(40);
+		this.setHpGr(70);
+		this.setStrGr(45);
 		this.setSkillGr(50);
-		this.setSpeedGr(60);
+		this.setSpeedGr(65);
 		this.setLuckGr(40);
-		this.setDefGr(15);
+		this.setDefGr(25);
 		this.setResGr(25);
 
 		this.setStrCap(25);
@@ -32,5 +32,4 @@ public class Nomad extends Unit {
 		this.setDefCap(23);
 		this.setResCap(22);
 	}
-
 }

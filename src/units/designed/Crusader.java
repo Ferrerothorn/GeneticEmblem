@@ -18,13 +18,13 @@ public class Crusader extends Unit {
 		this.setDefBase(5);
 		this.setResBase(3);
 
-		this.setHpGr(65);
+		this.setHpGr(75);
 		this.setStrGr(45);
-		this.setSkillGr(45);
+		this.setSkillGr(50);
 		this.setSpeedGr(40);
-		this.setLuckGr(40);
+		this.setLuckGr(45);
 		this.setDefGr(30);
-		this.setResGr(30);
+		this.setResGr(35);
 
 		this.setStrCap(27);
 		this.setSkillCap(27);
