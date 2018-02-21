@@ -19,12 +19,12 @@ public class Marauder extends Unit {
 		this.setResBase(1);
 
 		this.setHpGr(80);
-		this.setStrGr(40);
-		this.setSkillGr(35);
+		this.setStrGr(45);
+		this.setSkillGr(45);
 		this.setSpeedGr(40);
 		this.setLuckGr(30);
-		this.setDefGr(45);
-		this.setResGr(20);
+		this.setDefGr(50);
+		this.setResGr(25);
 
 		this.setStrCap(27);
 		this.setSkillCap(27);

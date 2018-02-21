@@ -21,9 +21,9 @@ public class Tank extends Unit {
 		this.setHpGr(70);
 		this.setStrGr(60);
 		this.setSkillGr(40);
-		this.setSpeedGr(35);
-		this.setLuckGr(25);
-		this.setDefGr(50);
+		this.setSpeedGr(40);
+		this.setLuckGr(35);
+		this.setDefGr(60);
 		this.setResGr(15);
 
 		this.setStrCap(30);

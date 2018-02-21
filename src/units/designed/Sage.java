@@ -20,11 +20,11 @@ public class Sage extends Unit {
 
 		this.setHpGr(45);
 		this.setStrGr(50);
-		this.setSkillGr(45);
+		this.setSkillGr(50);
 		this.setSpeedGr(55);
-		this.setLuckGr(40);
-		this.setDefGr(20);
-		this.setResGr(40);
+		this.setLuckGr(45);
+		this.setDefGr(25);
+		this.setResGr(45);
 
 		this.setStrCap(28);
 		this.setSkillCap(28);

@@ -22,8 +22,8 @@ public class Pupil extends Unit {
 
 		this.setHpGr(50);
 		this.setStrGr(55);
-		this.setSkillGr(40);
-		this.setSpeedGr(40);
+		this.setSkillGr(50);
+		this.setSpeedGr(55);
 		this.setLuckGr(50);
 		this.setDefGr(15);
 		this.setResGr(45);

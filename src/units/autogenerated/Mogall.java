@@ -19,10 +19,10 @@ public Mogall() {
     this.setDefBase(3);
     this.setResBase(8);
 
-    this.setHpGr(40);
-    this.setStrGr(65);
-    this.setSkillGr(40);
-    this.setSpeedGr(60);
+    this.setHpGr(45);
+    this.setStrGr(70);
+    this.setSkillGr(45);
+    this.setSpeedGr(65);
     this.setLuckGr(0);
     this.setDefGr(30);
     this.setResGr(60);

@@ -19,18 +19,18 @@ public class Templar extends Unit {
 		this.setResBase(4);
 
 		this.setHpGr(60);
-		this.setStrGr(45);
+		this.setStrGr(50);
 		this.setSkillGr(40);
-		this.setSpeedGr(35);
+		this.setSpeedGr(40);
 		this.setLuckGr(30);
-		this.setDefGr(50);
+		this.setDefGr(65);
 		this.setResGr(35);
 
 		this.setStrCap(26);
 		this.setSkillCap(23);
-		this.setSpeedCap(24);
-		this.setDefCap(27);
-		this.setResCap(25);
+		this.setSpeedCap(23);
+		this.setDefCap(29);
+		this.setResCap(24);
 	}
 
 }

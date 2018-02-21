@@ -18,11 +18,11 @@ public class Spellblade extends Unit {
 		this.setDefBase(4);
 		this.setResBase(3);
 
-		this.setHpGr(50);
+		this.setHpGr(55);
 		this.setStrGr(40);
-		this.setSkillGr(40);
-		this.setSpeedGr(55);
-		this.setLuckGr(40);
+		this.setSkillGr(45);
+		this.setSpeedGr(65);
+		this.setLuckGr(45);
 		this.setDefGr(35);
 		this.setResGr(35);
 
@@ -32,5 +32,4 @@ public class Spellblade extends Unit {
 		this.setDefCap(25);
 		this.setResCap(25);
 	}
-
 }

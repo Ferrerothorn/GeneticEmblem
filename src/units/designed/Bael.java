@@ -18,11 +18,11 @@ public class Bael extends Unit {
 		this.setResBase(2);
 
 		this.setHpGr(85);
-		this.setStrGr(55);
-		this.setSkillGr(38);
-		this.setSpeedGr(42);
-		this.setLuckGr(10);
-		this.setDefGr(50);
+		this.setStrGr(65);
+		this.setSkillGr(40);
+		this.setSpeedGr(45);
+		this.setLuckGr(15);
+		this.setDefGr(55);
 		this.setResGr(15);
 
 		this.setStrCap(30);

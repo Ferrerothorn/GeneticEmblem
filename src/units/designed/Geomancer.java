@@ -17,13 +17,13 @@ public class Geomancer extends Unit {
 		this.setDefBase(6);
 		this.setResBase(6);
 
-		this.setHpGr(65);
+		this.setHpGr(70);
 		this.setStrGr(40);
-		this.setSkillGr(35);
-		this.setSpeedGr(30);
+		this.setSkillGr(40);
+		this.setSpeedGr(35);
 		this.setLuckGr(35);
-		this.setDefGr(45);
-		this.setResGr(45);
+		this.setDefGr(50);
+		this.setResGr(50);
 
 		this.setStrCap(25);
 		this.setSkillCap(24);

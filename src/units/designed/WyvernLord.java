@@ -19,12 +19,12 @@ public class WyvernLord extends Unit {
 		this.setDefBase(7);
 		this.setResBase(2);
 
-		this.setHpGr(75);
-		this.setStrGr(50);
+		this.setHpGr(80);
+		this.setStrGr(55);
 		this.setSkillGr(50);
 		this.setSpeedGr(40);
 		this.setLuckGr(20);
-		this.setDefGr(45);
+		this.setDefGr(55);
 		this.setResGr(15);
 
 		this.setStrCap(29);
