@@ -8,8 +8,7 @@ public class DarkKnight extends Unit {
 public DarkKnight() {
 
     this.setJob("DarkKnight");
-    this.addWeapon(new IronLance());
-    this.addWeapon(new Flux());
+    this.addWeapon(new GrimLance());
     this.setHpBase(21);
     this.setCurrentHp(this.getHpBase());
     this.setStrBase(6);

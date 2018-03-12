@@ -36,6 +36,7 @@ public class ClassList {
 		releasedClasses.add(new Pupil());
 		releasedClasses.add(new Recruit());
 		releasedClasses.add(new Sage());
+		releasedClasses.add(new SeraJane());
 		releasedClasses.add(new Sniper());
 		releasedClasses.add(new Spellblade());
 		releasedClasses.add(new Swordmaster());
