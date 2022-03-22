@@ -1,20 +1,13 @@
 package main;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Scanner;
 
-import units.factory.*;
 import units.factory.ClassList;
 import units.factory.Unit;
 
@@ -23,9 +16,8 @@ public class List {
 	static ArrayList<Unit> arena = new ArrayList<>();
 	static Boolean on = true;
 	static Scanner input = new Scanner(System.in);
-	static CustomUnitGenerator customUnitGenerator;
 	static ClassList classList;
-	static int defaultLevelForExperiments = 15;
+	static int defaultLevelForExperiments = 20;
 	static boolean logging = false;
 
 	public static void main(String[] args) {
@@ -37,12 +29,11 @@ public class List {
 			System.out.println("1: Add a number of each class to the arena.");
 			System.out.println("2: View a single match.");
 			System.out.println("22: Run until 2048 remain.");
-			System.out.println("22: Run until specified number remain.");
+			System.out.println("222: Run until specified number remain.");
 			System.out.println("3: See the top 8 in the arena.");
 			System.out.println("456: Clear arena.");
 			System.out.println("5: Report on the surviving units.");
 			System.out.println("55: Report standard deviation.");
-			System.out.println("69: Genetically modify a new unit.");
 			System.out.println("77: Toggle logging.");
 			System.out.println("88: Determine which class is healthiest to cull.");
 			System.out.println("999: Quit.");
@@ -50,147 +41,57 @@ public class List {
 			int choice = input.nextInt();
 
 			switch (choice) {
-
-			case 0:
-				System.out.println("Adding units.");
-				addEachClass(25000, arena);
-				System.out.println("Leveling units.");
-				levelTheDudesTo(defaultLevelForExperiments, arena);
-				System.out.println("Deathmatch begins.");
-				deathmatch(2048, arena);
-				System.out.println();
-				showSurvivors(arena);
-				System.out.println();
-				break;
-
-			case 1:
-				System.out.println("How many of each class should be added?");
-				int number = input.nextInt();
-				addEachClass(number, arena);
-				System.out.println("What level should everyone start at?");
-				number = input.nextInt();
-				levelTheDudesTo(number, arena);
-				break;
-
-			case 2:
-				deathmatch(arena.size() - 1, arena);
-				break;
-
-			case 22:
-				deathmatch(2048, arena);
-				break;
-
-			case 222:
-				System.out.println("How many units should remain standing?");
-				int number1 = input.nextInt();
-				deathmatch(number1, arena);
-				break;
-
-			case 3:
-				scry(8);
-				break;
-
-			case 456:
-				arena.clear();
-				break;
-
-			case 5:
-				showSurvivors(arena);
-				break;
-
-			case 55:
-				System.out.println(metagameBalanceMetrics(arena));
-				break;
-
-			case 69:
-				addEachClass(15000, arena);
-				levelTheDudesTo(defaultLevelForExperiments, arena);
-				deathmatch(2048, arena);
-				System.out.println();
-				
-				System.out.println("Generating units endlessly...");
-
-				customUnitGenerator = new CustomUnitGenerator();
-				customUnitGenerator.populateArmory();
-
-				while (true) {
-					arena.clear();
-					addEachClass(15000, arena);
-					Custom custom = customUnitGenerator.buildUnit();
-
-					for (int i = 0; i < 15000; i++) {
-						arena.add(custom);
-					}
-					customUnitGenerator.generateNewUnitStats();
-
-					Collections.shuffle(arena);
+				case 0 -> {
+					System.out.println("Adding units.");
+					addEachClass(25000, arena);
+					System.out.println("Leveling units.");
 					levelTheDudesTo(defaultLevelForExperiments, arena);
+					System.out.println("Deathmatch begins.");
 					deathmatch(2048, arena);
-
-					double newStDev = metagameBalanceMetrics(arena);
-					ArrayList<Quantity> metagamePairs = new ArrayList<>();
-					HashMap<String, Integer> toBeSorted = reportOnSurvivors(arena);
-					sortByValues(toBeSorted);
-					populate(metagamePairs, toBeSorted);
-
-					if (containsJob(arena, "Custom")) {
-
-						String fileName = "" + newStDev;
-						String filePath = "C:\\Users\\sdolman\\git\\GE\\GeneticEmblem\\src\\units\\generated\\";
-						String output = customUnitGenerator.generateCode(newStDev);
-
-						File file = new File(filePath + fileName + ".java");
-						try {
-							PrintWriter writer = new PrintWriter(file, "UTF-8");
-							writer.print(output);
-							writer.close();
-						} catch (FileNotFoundException e) {
-							e.printStackTrace();
-						} catch (UnsupportedEncodingException e) {
-							e.printStackTrace();
-						}
-					}
+					System.out.println();
+					showSurvivors(arena);
+					System.out.println();
 				}
-
-			case 77:
-				logging = !logging;
-				break;
-
-			case 88:
-				ArrayList<Unit> counter = new ArrayList<>();
-				addEachClass(1, counter);
-				Collections.shuffle(counter);
-				analyseDisposableClasses(counter, true);
-				arena.clear();
-				break;
-
-			case 999:
-				on = false;
-				input.close();
-				break;
-			default:
-				break;
+				case 1 -> {
+					System.out.println("How many of each class should be added?");
+					int number = input.nextInt();
+					addEachClass(number, arena);
+					System.out.println("What level should everyone start at?");
+					number = input.nextInt();
+					levelTheDudesTo(number, arena);
+				}
+				case 2 -> deathmatch(arena.size() - 1, arena);
+				case 22 -> deathmatch(2048, arena);
+				case 222 -> {
+					System.out.println("How many units should remain standing?");
+					int number1 = input.nextInt();
+					deathmatch(number1, arena);
+				}
+				case 3 -> scry(8);
+				case 456 -> arena.clear();
+				case 5 -> showSurvivors(arena);
+				case 55 -> System.out.println(metagameBalanceMetrics(arena));
+				case 77 -> logging = !logging;
+				case 88 -> {
+					ArrayList<Unit> counter = new ArrayList<>();
+					addEachClass(1, counter);
+					Collections.shuffle(counter);
+					analyseDisposableClasses(counter, true);
+					arena.clear();
+				}
+				case 999 -> {
+					on = false;
+					input.close();
+				}
+				default -> {
+				}
 			}
 		}
-	}
-
-	private static boolean containsJob(ArrayList<Unit> arena2, String string) {
-		Boolean foundJob = false;
-		int index = 0;
-
-		while (!foundJob && index < arena.size()) {
-			if (arena.get(index).getJob().equals(string)) {
-				foundJob = true;
-			} else {
-				index++;
-			}
-		}
-		return foundJob;
 	}
 
 	private static void analyseDisposableClasses(ArrayList<Unit> counter, boolean firstIteration) {
 
-		ArrayList<Unit> tempArena = null;
+		ArrayList<Unit> tempArena;
 		HashMap<String, Double> metagameHealth = new HashMap<>();
 
 		System.out.println("Adding 12500 of each class to arena.");
@@ -232,11 +133,10 @@ public class List {
 			System.out.println("[" + withoutHealth + "]");
 		}
 
-		if (recheckThese.size() > 0 && firstIteration == true) {
+		if (recheckThese.size() > 0 && firstIteration) {
 			System.out.println();
 			System.out.println("Some classes appear to be polluting the metagame.");
 			System.out.println("Initiating recheck.");
-			tempArena = null;
 			metagameHealth.clear();
 			analyseDisposableClasses(recheckThese, false);
 		}
@@ -245,23 +145,13 @@ public class List {
 		printAlternateMetagameHealth(metagameHealth);
 	}
 
-	private static void populate(ArrayList<Quantity> metagamePairs, HashMap<String, Integer> toBeSorted) {
-		for (Map.Entry<String, Integer> entry : toBeSorted.entrySet()) {
-			metagamePairs.add(new Quantity(entry.getKey(), entry.getValue()));
-		}
-		Collections.sort(metagamePairs);
-	}
-
 	@SuppressWarnings("unchecked")
 	private static void printAlternateMetagameHealth(HashMap<String, Double> metagameHealth) {
 
 		metagameHealth = sortByValues(metagameHealth);
 
-		@SuppressWarnings("rawtypes")
-		Iterator it = metagameHealth.entrySet().iterator();
-		while (it.hasNext()) {
-			Map.Entry pair = (Map.Entry) it.next();
-			System.out.println(pair.getKey() + ": " + pair.getValue());
+		for (Map.Entry<String, Double> stringDoubleEntry : metagameHealth.entrySet()) {
+			System.out.println(((Map.Entry) stringDoubleEntry).getKey() + ": " + ((Map.Entry) stringDoubleEntry).getValue());
 		}
 	}
 
@@ -269,18 +159,14 @@ public class List {
 		HashMap<String, Integer> survivors = reportOnSurvivors(anArena);
 		double total = 0;
 		double index = survivors.size();
-		Iterator it = survivors.entrySet().iterator();
-		while (it.hasNext()) {
-			Map.Entry pair = (Map.Entry) it.next();
-			total += Integer.parseInt(pair.getValue().toString());
+		for (Map.Entry<String, Integer> stringIntegerEntry : survivors.entrySet()) {
+			total += Integer.parseInt(((Map.Entry) stringIntegerEntry).getValue().toString());
 		}
 		double mean = total / index;
 
 		ArrayList<Double> meanSubs = new ArrayList<>();
-		Iterator it2 = survivors.entrySet().iterator();
-		while (it2.hasNext()) {
-			Map.Entry pair = (Map.Entry) it2.next();
-			double beforeSquaring = Double.parseDouble(pair.getValue().toString());
+		for (Map.Entry<String, Integer> stringIntegerEntry : survivors.entrySet()) {
+			double beforeSquaring = Double.parseDouble(((Map.Entry) stringIntegerEntry).getValue().toString());
 			meanSubs.add(Math.pow(beforeSquaring - mean, 2));
 		}
 
@@ -301,11 +187,14 @@ public class List {
 
 	private static HashMap<String, Integer> reportOnSurvivors(ArrayList<Unit> anArena) {
 		HashMap<String, Integer> survivors = new HashMap<>();
+
 		for (Unit u : anArena) {
-			if (!survivors.containsKey(u.getJob())) {
-				survivors.put(u.getJob(), 1);
+			String key = "" + u.getName() + " (" + u.getJob() + ")";
+
+			if (!survivors.containsKey(key)) {
+				survivors.put(key, 1);
 			} else {
-				survivors.put(u.getJob(), survivors.get(u.getJob()) + 1);
+				survivors.put(key, survivors.get(key) + 1);
 			}
 		}
 		return survivors;
@@ -316,10 +205,9 @@ public class List {
 
 		survivors = sortByValues(survivors);
 
-		Iterator it = survivors.entrySet().iterator();
-		while (it.hasNext()) {
+		for (Map.Entry<String, Integer> stringIntegerEntry : survivors.entrySet()) {
 			@SuppressWarnings("rawtypes")
-			Map.Entry pair = (Map.Entry) it.next();
+			Map.Entry pair = stringIntegerEntry;
 			System.out.println(pair.getKey() + ": " + pair.getValue());
 		}
 	}
@@ -361,15 +249,16 @@ public class List {
 	}
 
 	private static void addEach(ArrayList<Unit> released, ArrayList<Unit> theArena) {
-		for (Unit u : released) {
-			theArena.add(u);
-		}
+		theArena.addAll(released);
 	}
 
 	public static void levelTheDudesTo(int lv, ArrayList<Unit> dudes) {
 		for (Unit u : dudes) {
 			for (int i = 1; i < lv; i++) {
 				u.levelUp();
+				if (u.getLv() == 20){
+					u.promote();
+				}
 			}
 		}
 	}
@@ -377,15 +266,10 @@ public class List {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private static HashMap sortByValues(HashMap map) {
 		LinkedList list = new LinkedList(map.entrySet());
-		Collections.sort(list, new Comparator() {
-			@Override
-			public int compare(Object o1, Object o2) {
-				return ((Comparable) ((Map.Entry) (o2)).getValue()).compareTo(((Map.Entry) (o1)).getValue());
-			}
-		});
+		list.sort((o1, o2) -> ((Comparable) ((Map.Entry) (o2)).getValue()).compareTo(((Map.Entry) (o1)).getValue()));
 		HashMap sortedHashMap = new LinkedHashMap();
-		for (Iterator it = list.iterator(); it.hasNext();) {
-			Map.Entry entry = (Map.Entry) it.next();
+		for (Object o : list) {
+			Map.Entry entry = (Map.Entry) o;
 			sortedHashMap.put(entry.getKey(), entry.getValue());
 		}
 		return sortedHashMap;

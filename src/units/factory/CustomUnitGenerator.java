@@ -82,15 +82,6 @@ public class CustomUnitGenerator {
 		generateNewUnitStats();
 	}
 
-	public Custom buildUnit() {
-		ArrayList<Weapon> backpack = new ArrayList<Weapon>();
-		fill(backpack);
-
-		Custom custom = new Custom(backpack, baseHP, strBase, skillBase, speedBase, luckBase, defBase, resBase, hpGr,
-				strGr, skillGr, speedGr, luckGr, defGr, resGr, strCap, speedCap, skillCap, defCap, resCap);
-		return custom;
-	}
-
 	private void fill(ArrayList<Weapon> backpack) {
 		backpack.addAll(armory);
 	}

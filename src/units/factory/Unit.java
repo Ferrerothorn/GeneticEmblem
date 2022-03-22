@@ -7,6 +7,7 @@ import weapons.Weapon;
 
 public abstract class Unit {
 
+	String name = "";
 	String job = "";
 	ArrayList<String> traits = new ArrayList<>();
 	protected ArrayList<Weapon> backpack = new ArrayList<>();
@@ -38,9 +39,6 @@ public abstract class Unit {
 	int LuckBase;
 	int DefBase;
 	int ResBase;
-
-	public Unit() {
-	}
 
 	public void setBaseCrit(int n) {
 		baseCrit = n;
@@ -242,6 +240,14 @@ public abstract class Unit {
 		ResBase = resBase;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String s) {
+		name = s;
+	}
+
 	public String getJob() {
 		return job;
 	}
@@ -432,11 +438,11 @@ public abstract class Unit {
 			}
 			return opponent;
 		} else {
-			int thistotal = this.getHpBase() + this.getStrBase() + this.getSkillBase() + this.getLuckBase()
+			int thisTotal = this.getHpBase() + this.getStrBase() + this.getSkillBase() + this.getLuckBase()
 					+ this.getSpeedBase() + this.getDefBase() + this.getResBase();
 			int unit2total = opponent.getHpBase() + opponent.getStrBase() + opponent.getSkillBase()
 					+ opponent.getLuckBase() + opponent.getSpeedBase() + opponent.getDefBase() + opponent.getResBase();
-			if (unit2total > thistotal) {
+			if (unit2total > thisTotal) {
 				return opponent;
 			}
 			return this;
@@ -454,6 +460,7 @@ public abstract class Unit {
 	public void levelUp() {
 		if (lv < 40) {
 			lv++;
+
 
 			int metisBonus = 0;
 			if (this.getTraits().contains("Metis")) {
@@ -521,7 +528,7 @@ public abstract class Unit {
 	public void chooseWeaponFromBackpack(Unit target) {
 		chosenWeapon = null;
 		if (backpack.size() >= 2) {
-			ArrayList<WeaponQualityComparator> bestWeaponChoice = new ArrayList<WeaponQualityComparator>();
+			ArrayList<WeaponQualityComparator> bestWeaponChoice = new ArrayList<>();
 
 			for (Weapon weps : backpack) {
 				for (Weapon theirOptions : target.getBackpack()) {
@@ -572,5 +579,43 @@ public abstract class Unit {
 
 	private ArrayList<Weapon> getBackpack() {
 		return backpack;
+	}
+
+	public void addTrait(String trait){
+		traits.add(trait);
+	}
+
+	public abstract void promote();
+
+	public void gainPromotionStats(int hpGain, int strGain, int skillGain, int speedGain, int defGain, int resGain){
+		HpBase += hpGain;
+		if(HpBase > 60) {
+			HpBase = 60;
+		}
+
+		StrBase += strGain;
+		if(StrBase > getStrCap()) {
+			StrBase = getStrCap();
+		}
+
+		SkillBase += skillGain;
+		if(SkillBase > getSkillCap()) {
+			SkillBase = getSkillCap();
+		}
+
+		SpeedBase += speedGain;
+		if(SpeedBase > getSpeedCap()) {
+			SpeedBase = getSpeedCap();
+		}
+
+		DefBase += defGain;
+		if(DefBase > getDefCap()) {
+			DefBase = getDefCap();
+		}
+
+		ResBase += resGain;
+		if(ResBase > getResCap()) {
+			ResBase = getResCap();
+		}
 	}
 }
